@@ -1,0 +1,36 @@
+{
+  "name": "flutter-backend-services",
+  "version": "1.0.0",
+  "description": "Using Node.js with Expressjs to provide backend services to a mobile application implemented using Dart with Flutter",
+  "main": "app.js",
+  "scripts": {
+    "test": "no test specified",
+    "start": "nodemon ./server",
+    "debug": "ndb ./server",
+    "start:prod": "NODE_ENV=production nodemon ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mix-4dev/Flutter-Backend-Services.git"
+  },
+  "keywords": [],
+  "author": "Mix <mohamedmostafanowar@gmail.com>",
+  "license": "BFCAI",
+  "bugs": {
+    "url": "https://github.com/Mix-4dev/Flutter-Backend-Services/issues"
+  },
+  "homepage": "https://github.com/Mix-4dev/Flutter-Backend-Services#readme",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "mongoose": "^9.0.1",
+    "morgan": "^1.10.1",
+    "validator": "^13.15.23"
+  },
+  "optionalDependencies": {
+    "nodemon": "^3.1.10",
+    "ndb": "^1.1.5"
+  }
+}
