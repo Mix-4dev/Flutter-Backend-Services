@@ -1,3 +1,4 @@
+const itemRouter = require('./routes/itemRoutes');
 const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -11,12 +12,5 @@ app.use('/', bodyParser.json());
 if (process.env.NODE_ENV === 'development') {
   app.use('/', morgan('dev'));
 }
-
-app.get('/', (req, res) => {
-  res.status(200).json({
-    status: 'success',
-    message: 'Welcome to flutter app',
-  });
-});
-
+app.use('/api/v1/items', itemRouter);
 module.exports = app;
