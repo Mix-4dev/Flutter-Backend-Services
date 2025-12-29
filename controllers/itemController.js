@@ -31,3 +31,13 @@ exports.createItem = async (req, res, next) => {
     });
   }
 };
+
+exports.getItem = async (req, res, next) => {
+  const item = await Item.findById(req.params.id);
+  res.status(200).json({
+    status: 'success',
+    data: {
+      item,
+    },
+  });
+};

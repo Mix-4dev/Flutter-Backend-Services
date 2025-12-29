@@ -6,4 +6,6 @@ router
   .get(itemController.getAllItems)
   .post(itemController.createItem);
 
+router.route('/:id').get(itemController.getItem);
+
 module.exports = router;
