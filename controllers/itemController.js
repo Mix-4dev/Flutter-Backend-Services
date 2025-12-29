@@ -1,9 +1,13 @@
 const Item = require('../models/itemModel');
 exports.getAllItems = async (req, res, next) => {
   try {
+    const items = await Item.find({}, {});
     res.status(200).json({
       status: 'success',
-      data: 'All data is found',
+      results: items.length,
+      data: {
+        items,
+      },
     });
   } catch (error) {
     res.status(500).json({
