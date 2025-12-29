@@ -36,8 +36,10 @@ const itemSchema = new mongoose.Schema(
       type: String,
       default: null,
     },
-    thumbnail: String,
-    default: null,
+    thumbnail: {
+      type: String,
+      default: null,
+    },
   },
   {}
 );
