@@ -25,13 +25,19 @@ const itemSchema = new mongoose.Schema(
     },
     price: {
       type: Number,
+      required: [true, 'An item must has a price'],
       min: [1, 'An item must be above 1.0'],
+      validate: [
+        validatorJS.isNumeric,
+        `price ({VALUE}) must be a valid number`,
+      ],
     },
     details: {
       type: String,
-      default: 'No details for this item',
+      default: null,
     },
     thumbnail: String,
+    default: null,
   },
   {}
 );
